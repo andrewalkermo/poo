@@ -9,7 +9,12 @@ public class Item {
     public Item(String codigo, String nome, double preco){
         this.codigo = codigo;
         this.nome = nome;
-        this.preco = preco;
+        if(preco < 0){
+            throw new IllegalArgumentException("Valores negativos não são permitidos para preco");
+        }
+        else {
+            this.preco = preco;
+        }
     }
 
     public String getNome() {
@@ -33,7 +38,12 @@ public class Item {
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        if(preco < 0){
+            throw new IllegalArgumentException("Valores negativos não são permitidos para preco");
+        }
+        else {
+            this.preco = preco;
+        }
     }
 
 }

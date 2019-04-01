@@ -29,7 +29,12 @@ public class Pedido {
     }
 
     public void setStatus(int status) {
-        this.status = status;
+        if(status == 1 || status == 2 || status == 3){
+            this.status = status;
+        }
+        else {
+            throw new IllegalArgumentException("Valor inválido para status");
+        }
     }
 
     public double getPrecoTotal() {
