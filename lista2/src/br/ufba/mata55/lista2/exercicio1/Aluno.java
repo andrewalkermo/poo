@@ -2,12 +2,14 @@ package br.ufba.mata55.lista2.exercicio1;
 
 public class Aluno {
 
-    public String nome;
+    public final String nome;
     private Double nota;
 
     public Aluno (String nome, Double nota){
         this.nome = nome;
-        this.nota = nota;
+        if(nota >= 0.0 && nota <= 10.0){
+            this.nota = nota;
+        }
     }
 
     public Aluno (String nome){
@@ -15,11 +17,15 @@ public class Aluno {
     }
 
     public void setNota(Double nota) {
-        this.nota = nota;
-    }
+        if(nota >= 0.0 && nota <= 10.0){
+            this.nota = nota;
+        }    }
 
     public Double getNota() {
         return nota;
     }
 
+    public String getNome() {
+        return nome;
+    }
 }

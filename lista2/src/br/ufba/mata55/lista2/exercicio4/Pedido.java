@@ -14,14 +14,18 @@ public class Pedido {
 
         this.data = data;
         this.codigo = codigo;
-        this.status = status;
         this.quantidade = quantidade;
         this.item = item;
 
+        if(status == 1 || status == 2 || status == 3){
+            this.status = status;
+        }
     }
 
     public void setItem(Item item) {
-        this.item = item;
+        if(item != null){
+            this.item = item;
+        }
     }
 
     public void setQuantidade(int quantidade) {
@@ -76,7 +80,5 @@ public class Pedido {
     public String getData() {
         return data;
     }
-
-
 
 }

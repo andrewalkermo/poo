@@ -6,13 +6,11 @@ public class Item {
     private String nome;
     private double preco;
 
-    public Item(String codigo, String nome, double preco){
+    public Item(String codigo,String nome, double preco){
         this.codigo = codigo;
         this.nome = nome;
-        if(preco < 0){
-            throw new IllegalArgumentException("Valores negativos não são permitidos para preco");
-        }
-        else {
+
+        if(preco >= 0){
             this.preco = preco;
         }
     }
@@ -30,18 +28,19 @@ public class Item {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome != null) {
+            this.nome = nome;
+        }
     }
 
     public void setCodigo(String codigo) {
-        this.codigo = codigo;
+        if (codigo != null){
+            this.codigo = codigo;
+        }
     }
 
     public void setPreco(double preco) {
-        if(preco < 0){
-            throw new IllegalArgumentException("Valores negativos não são permitidos para preco");
-        }
-        else {
+        if(preco >= 0){
             this.preco = preco;
         }
     }

@@ -14,12 +14,12 @@ public class Pessoa {
         this.rg = rg;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public void setRg(int rg) {
         this.rg = rg;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getRg() {

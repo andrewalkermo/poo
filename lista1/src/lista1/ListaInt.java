@@ -4,11 +4,11 @@ class ListaInt {
     int[] lista;
     int tamanho;
 
-    ListaInt(int tamanho){
-        this.lista = new int[tamanho];
+    ListaInt(int capacidade){
+        this.lista = new int[capacidade];
     }
     int obtemTamanho() {
-        return this.lista.length;
+        return this.tamanho;
     }
     boolean insereElemento(int valor) {
         if(this.lista.length > this.tamanho){
@@ -23,4 +23,11 @@ class ListaInt {
         }
         return -1;
     }
+
+    public static void main(String []args){
+
+
+
+    }
+
 }
